@@ -87,14 +87,23 @@ nav a:hover {
     margin: 20px 0;
     display: flex;
     align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.friend-posts-list::-webkit-scrollbar {
+    display: none;
 }
 
 .friend-post {
     height: 350px;
-    width: 300px;
+    width: 296px;
     margin-right: 50px;
     border: 2px solid black;
     text-align: center;
+    display: inline-block;
+    white-space: normal;
+    flex-shrink: 0; /* 要素が縮むのを防ぐ */
 }
 
 .friend-post p {
@@ -133,7 +142,15 @@ nav a:hover {
     padding: 5px 20px;
     border: 2px solid black;
     border-radius: 20px;
+    background-color: #CCFFCC;
 }
+
+.post-footer a:hover {
+    background-color: #00FFCC;
+    color: white;
+    border: 2px solid #00FFCC;
+}
+
 
 .group-chats {
     height: auto;
@@ -151,7 +168,6 @@ nav a:hover {
     margin-right: 10px;
     border: 2px solid black;
     border-radius: 30px;
-    /* text-align: center; */
 }
 
 .group-chat-name {
@@ -160,6 +176,7 @@ nav a:hover {
 
 .group-chat-name p {
     margin: 0;
+    padding-left: 10px;
     font-size: 1rem;
     border: 1px solid black;
 }
